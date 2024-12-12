@@ -9,7 +9,8 @@
     "react-redux": "^9.2.0",
     "react-scripts": "5.0.1",
     "redux": "^5.0.1",
-    "styled-components": "^6.1.13"
+    "styled-components": "^6.1.13",
+    "web-vitals": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
