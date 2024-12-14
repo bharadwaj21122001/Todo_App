@@ -34,8 +34,10 @@ body {
 /* Ensure the title "To-Do App" remains visible in all modes */
 h1 {
   text-align: center;
-  font-size: 24px;
-  color: #333; /* Default color for light mode */
+  font-size: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #181717; /* Default color for light mode */
 }
 
 .dark-mode h1 {
