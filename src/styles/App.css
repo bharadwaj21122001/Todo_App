@@ -3,18 +3,145 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .app {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
   background: white;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
 
+.app:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .app {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+/* Ensure the title "To-Do App" remains visible in all modes */
 h1 {
   text-align: center;
-  color: #333;
+  font-size: 24px;
+  color: #333; /* Default color for light mode */
+}
+
+.dark-mode h1 {
+  color: #f4f4f4; /* White color for dark mode */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  color: #007bff;
+}
+
+.dark-mode .dark-mode-toggle {
+  color: #f4f4f4;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.left-pane {
+  flex: 1;
+  min-width: 300px;
+}
+
+.right-pane {
+  flex: 1;
+  min-width: 400px;
+  margin-left: 20px;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filters-container select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.dark-mode .filters-container select {
+  background-color: #444;
+  color: #e0e0e0;
+  border: 1px solid #666;
+}
+
+.priority-filter {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .left-pane,
+  .right-pane {
+    min-width: 100%;
+  }
+
+  .filters-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .app {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .filters-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
 }
