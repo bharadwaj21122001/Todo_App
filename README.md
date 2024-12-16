@@ -2,7 +2,25 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# How to Run This React App
+
+Follow the steps below to clone and run this React app locally
+
+## **Step 1: Clone the Repository**
+1. Open your terminal or command prompt.
+2. Clone this repository using the following command:
+   ```bash
+   git clone https://github.com/bharadwaj21122001/Todo_App.git
+
+Navigate into the project directory:
+  cd your-repository-name
+
+## **Step 2: Install Dependencies
+  a. Ensure that Node.js is installed on your machine. You can download it from Node.js official website.
+  b. Install the dependencies using the following command
+     **### `npm install`**
+
+## **Step 3:
 
 In the project directory, you can run:
 
